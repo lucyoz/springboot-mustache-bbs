@@ -5,11 +5,9 @@ server:
       force-response: true
 
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/likelion-db?useSSL=false
-    username: root
-    password: password
+  profiles:
+    include:
+      - aws
 
   jpa:
     show-sql: true
